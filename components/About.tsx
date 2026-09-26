@@ -1,16 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTheme } from "./ThemeProvider";
 import { useLanguage } from "./LanguageProvider";
 import {
   Sparkles,
 } from "lucide-react";
 
 export default function About() {
-  const { theme } = useTheme();
   const { t } = useLanguage();
-  const isDark = theme === "dark";
+  const isDark = false;
 
   return (
     <section
