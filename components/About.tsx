@@ -101,7 +101,7 @@ export default function About() {
                   isDark ? "text-[#a89076] border-[#b5804a]/15" : "text-slate-600 border-slate-200"
                 }`}>
                   <span>{t.about.standardLabel}</span>
-                  <span className="font-bold text-[#f0e6d6]">{t.about.standardVal}</span>
+                  <span className={`font-bold ${isDark ? "text-[#f0e6d6]" : "text-slate-900"}`}>{t.about.standardVal}</span>
                 </div>
                 <div className={`flex items-center justify-between text-xs border-b pb-2 ${
                   isDark ? "text-[#a89076] border-[#b5804a]/15" : "text-slate-600 border-slate-200"
