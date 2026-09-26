@@ -1,0 +1,1 @@
+docker build /etc/easypanel/projects/xbot/portfolio/code/ -f /etc/easypanel/projects/xbot/portfolio/code/.nixpacks/Dockerfile -t easypanel/xbot/portfolio --build-arg CI=true --build-arg GIT_SHA=504445f9f1af96bec96acd8accc21391c0e28cad --build-arg NIXPACKS_METADATA=node --build-arg NODE_ENV=production --build-arg NPM_CONFIG_PRODUCTION=false --label keep=true

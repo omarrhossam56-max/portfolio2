@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  /* Luxury dark theme (always dark, matching reference) */
+  --bg-primary:    #0d0905;
+  --bg-card:       #150e0a;
+  --bg-section:    #100b08;
+  --border:        rgba(180, 130, 100, 0.15);
+  --border-hover:  rgba(180, 130, 100, 0.40);
+  --accent:        #b5804a;
+  --accent-light:  #d4a06a;
+  --accent-dim:    rgba(181, 128, 74, 0.15);
+  --text-primary:  #f0e6d6;
+  --text-secondary:#a89076;
+  --text-muted:    #6b5444;
+  --cream:         #f5ede0;
+  --dark-red:      #6b1f1f;
+  --burgundy:      #8b2020;
+  --green:         #4d8a5c;
+}
+
+[data-theme="light"] {
+  --bg-primary:    #f5ede0;
+  --bg-card:       #fffaf4;
+  --bg-section:    #ede3d4;
+  --border:        rgba(100, 60, 30, 0.18);
+  --border-hover:  rgba(100, 60, 30, 0.40);
+  --accent:        #8b4513;
+  --accent-light:  #b5622a;
+  --accent-dim:    rgba(139, 69, 19, 0.12);
+  --text-primary:  #1a0f08;
+  --text-secondary:#5a3f2a;
+  --text-muted:    #9a7a60;
+  --cream:         #1a0f08;
+  --dark-red:      #7c1f1f;
+  --burgundy:      #9b2020;
+  --green:         #2d6b40;
+}
+
+@theme {
+  --color-bg-primary:    var(--bg-primary);
+  --color-bg-card:       var(--bg-card);
+  --color-bg-section:    var(--bg-section);
+  --color-border-theme:  var(--border);
+  --color-border-hover:  var(--border-hover);
+  --color-accent:        var(--accent);
+  --color-accent-light:  var(--accent-light);
+  --color-accent-dim:    var(--accent-dim);
+  --color-text-primary:  var(--text-primary);
+  --color-text-secondary:var(--text-secondary);
+  --color-text-muted:    var(--text-muted);
+  --color-cream:         var(--cream);
+  --color-dark-red:      var(--dark-red);
+  --color-burgundy:      var(--burgundy);
+  --color-green-theme:   var(--green);
+
+  --font-serif:   "Playfair Display", Georgia, serif;
+  --font-display: "DM Serif Display", "Playfair Display", serif;
+  --font-sans:    "DM Sans", system-ui, sans-serif;
+}
+
+/* ── Base ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+/* ── Serif headline utility ─────────────────────────────── */
+.font-serif   { font-family: "Playfair Display", Georgia, serif; }
+.font-display { font-family: "DM Serif Display", "Playfair Display", serif; }
+.font-sans    { font-family: "DM Sans", system-ui, sans-serif; }
+
+/* ── Selection ─────────────────────────────────────────── */
+::selection {
+  background: rgba(181, 128, 74, 0.35);
+  color: #f0e6d6;
+}
